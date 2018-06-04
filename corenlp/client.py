@@ -116,7 +116,7 @@ class CoreNLPClient(RobustService):
     DEFAULT_ANNOTATORS = "tokenize ssplit pos ner depparse".split()
     DEFAULT_PROPERTIES = {}
 
-    def __init__(self, start_server=True, endpoint="http://localhost:9000", timeout=5000, annotators=DEFAULT_ANNOTATORS, properties=DEFAULT_PROPERTIES):
+    def __init__(self, start_server=True, endpoint="http://localhost:9000", timeout=5000, annotators=DEFAULT_ANNOTATORS, properties=DEFAULT_PROPERTIES, allocate_mem=4):
         if start_server:
             host, port = urlparse(endpoint).netloc.split(":")
             assert host == "localhost", "If starting a server, endpoint must be localhost"
