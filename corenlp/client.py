@@ -113,7 +113,7 @@ class CoreNLPClient(RobustService):
     """
     A CoreNLP client to the Stanford CoreNLP server.
     """
-    DEFAULT_ANNOTATORS = "tokenize ssplit lemma pos ner depparse".split()
+    DEFAULT_ANNOTATORS = "tokenize ssplit pos ner depparse".split()
     DEFAULT_PROPERTIES = {}
 
     def __init__(self, start_server=True, endpoint="http://localhost:9000", timeout=5000, annotators=DEFAULT_ANNOTATORS, properties=DEFAULT_PROPERTIES):
